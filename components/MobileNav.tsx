@@ -13,6 +13,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import Footer from "./Footer"
   
 
 const MobileNav = ({user}:MobileNavProps) => {
@@ -27,7 +28,7 @@ const MobileNav = ({user}:MobileNavProps) => {
         alt="menu"
     className="cursor-pointer"/>
     </SheetTrigger>
-    <SheetContent side="left" className="border-nume bg-white gap-1 px-4">
+    <SheetContent side="left" className="border-none bg-white gap-1 px-4">
     <Link href="/" className='mb-12 flex  cursor-pointer items-center gap-2'>
         <Image 
         src="/icons/logo.svg"
@@ -79,6 +80,7 @@ USER
 
                 </nav>
             </SheetClose>
+            <Footer user={user} type='mobile' />
         </div>
         
     </SheetContent>
